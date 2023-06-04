@@ -1,12 +1,14 @@
 import React from "react";
 import css from '../component_form/Form.module.css';
 import { nanoid } from "nanoid";
+import { AiOutlinePhone } from 'react-icons/ai';
+import { AiOutlineUserAdd } from 'react-icons/ai';
 // import shortid from "shortid";
 export class ContactForm extends React.Component {
     state = {
       name: '',
       number: '',
-      id: '',
+  
     };
     //id
     // nameInputId = shortid.generate();
@@ -39,6 +41,7 @@ export class ContactForm extends React.Component {
     return (
       <form onSubmit={this.handleSubmit} className={css.form}>
         <label htmlFor={this.nameId} className={css.label_name}>
+          <AiOutlineUserAdd />
             Name
           <input
             type="text"
@@ -52,6 +55,7 @@ export class ContactForm extends React.Component {
           />
         </label>
        <label className={css.label_number}>
+       <AiOutlinePhone />
           Number
           <input
             type="tel"
